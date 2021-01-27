@@ -95,3 +95,11 @@ kube-node-lease   Active   10m
 flux-system       Active   65s
 runyontr          Active   39s
 ```
+
+and has the label we expect from our namespace definition:
+
+```bash
+❯ k get ns runyontr --show-labels
+NAME       STATUS   AGE     LABELS
+runyontr   Active   5m58s   foo=bar,kustomize.toolkit.fluxcd.io/checksum=415bcdb44b2060e291c07f5e26fc7bd6044cf835,kustomize.toolkit.fluxcd.io/name=flux-system,kustomize.toolkit.fluxcd.io/namespace=flux-system
+```
