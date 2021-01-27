@@ -1,0 +1,4 @@
+namespace: runyontr
+
+resources:
+- namespace.yaml
